@@ -35,11 +35,14 @@ export function activate(context: vscode.ExtensionContext) {
 	const userSidPrefixes = vscode.workspace.getConfiguration().get<string[]>('twilio-sid-generator.sidsPrefixes');
 
 	if (userSidPrefixes) {
-		
-		const userSidPrefixesLabels = userSidPrefixes.map((usp: string) => {
-			const stringTokens = usp.split(',');
-			return {label: stringTokens[0], description: stringTokens[1]}
-		});
+		const userSidPrefixesLabels = userSidPrefixes.map( usp => usp.trim().split(',') )
+											.filter( (elem, index, self) => {
+												return self.length === 2;
+											})	
+											.map( (stringTokens) => {
+												return {label: stringTokens[0].trim(), description: stringTokens[1].trim() }; 
+											});
+
 		allSidPrefixes = BUILTIN_ID_PREFIXES.concat(userSidPrefixesLabels);
 
 		allSidPrefixes = allSidPrefixes.filter((elem, index, self) => {
@@ -47,9 +50,8 @@ export function activate(context: vscode.ExtensionContext) {
 		});
 	}
 
-	allSidPrefixes = _.orderBy(allSidPrefixes, ['label'], ['asc']);
+	allSidPrefixes = _.orderBy(allSidPrefixes, ['label', 'description'], ['asc', 'asc']);
 	allSidPrefixes = _.sortedUniqBy(allSidPrefixes,'label');
-
 }
 
 async function insertSid() {
