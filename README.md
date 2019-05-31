@@ -9,10 +9,10 @@ Example:
 
 ```markdown
 {
-
     "twilio-sid-generator.sidsPrefixes": [
         "AC,Account",
         "PN,Phone Number",
+    ]
 }
 ```
 
