@@ -1,72 +1,118 @@
 {
-	"name": "twilio-sid-generator",
-	"displayName": "Twilio SID Generator",
-	"description": "Generates SIDs to be used with Twilio code",
-	"version": "1.0.2",
-	"publisher": "LuisSantos",
-	"repository": "https://github.com/tuxetuxe/twilio-sid-generator",
-	"engines": {
-		"vscode": "^1.34.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.twilio.sid",
-		"onCommand:extension.twilio.sid.account",
-		"onCommand:extension.twilio.sid.phoneNumber"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"configuration": {
-			"type": "object",
-			"title": "Twilio Sid Generator configuration",
-			"properties": {
-				"twilio-sid-generator.sidsPrefixes": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					},
-					"default": [],
-					"description": "A list of sid prefixes with its description ie: AC,Account "
-				}
-			}
-		},
-		"commands": [
-			{ "command": "extension.twilio.sid", "title": "Twilio SID" },
-			{ "command": "extension.twilio.sid.account", "title": "Twilio SID - Account" },
-			{ "command": "extension.twilio.sid.address", "title": "Twilio SID - Address" },
-			{ "command": "extension.twilio.sid.Identity", "title": "Twilio SID - Identity" },
-			{ "command": "extension.twilio.sid.phoneNumber", "title": "Twilio SID - Phone Number" },
-			{ "command": "extension.twilio.sid.request", "title": "Twilio SID - Request" },
-			{ "command": "extension.twilio.sid.MessagingApplication", "title": "Twilio SID - Messaging Application" },
-			{ "command": "extension.twilio.sid.mms", "title": "Twilio SID - MMS" },
-			{ "command": "extension.twilio.sid.sms", "title": "Twilio SID - SMS" },
-			{ "command": "extension.twilio.sid.call", "title": "Twilio SID - Call" },
-			{ "command": "extension.twilio.sid.conference", "title": "Twilio SID - Conference" },
-			{ "command": "extension.twilio.sid.authorizationDocument", "title": "Twilio SID - Authorization Document" },
-			{ "command": "extension.twilio.sid.Queue", "title": "Twilio SID - Queue" },
-			{ "command": "extension.twilio.sid.user", "title": "Twilio SID - User" }
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "npm run compile && node ./node_modules/vscode/bin/test"
-	},
-	"devDependencies": {
-		"typescript": "^3.3.1",
-		"vscode": "^1.1.28",
-		"tslint": "^5.12.1",
-		"@types/node": "^10.12.21",
-		"@types/mocha": "^2.2.42"
-	},
-	"dependencies": {
-		"@types/lodash": "^4.14.132",
-		"lodash": "^4.17.11",
-		"randombytes": "^2.1.0",
-		"ts-md5": "^1.2.4"
-	}
+  "name": "twilio-sid-generator",
+  "displayName": "Twilio SID Generator",
+  "description": "Generates SIDs to be used with Twilio code",
+  "version": "1.0.2",
+  "publisher": "LuisSantos",
+  "repository": "https://github.com/tuxetuxe/twilio-sid-generator",
+  "engines": {
+    "vscode": "^1.34.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.twilio.sid",
+    "onCommand:extension.twilio.sid.account",
+    "onCommand:extension.twilio.sid.phoneNumber"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Twilio Sid Generator configuration",
+      "properties": {
+        "twilio-sid-generator.sidsPrefixes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "A list of sid prefixes with its description ie: AC,Account "
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.twilio.sid",
+        "title": "Twilio SID"
+      },
+      {
+        "command": "extension.twilio.sid.account",
+        "title": "Twilio SID - Account"
+      },
+      {
+        "command": "extension.twilio.sid.address",
+        "title": "Twilio SID - Address"
+      },
+      {
+        "command": "extension.twilio.sid.Identity",
+        "title": "Twilio SID - Identity"
+      },
+      {
+        "command": "extension.twilio.sid.phoneNumber",
+        "title": "Twilio SID - Phone Number"
+      },
+      {
+        "command": "extension.twilio.sid.request",
+        "title": "Twilio SID - Request"
+      },
+      {
+        "command": "extension.twilio.sid.MessagingApplication",
+        "title": "Twilio SID - Messaging Application"
+      },
+      {
+        "command": "extension.twilio.sid.mms",
+        "title": "Twilio SID - MMS"
+      },
+      {
+        "command": "extension.twilio.sid.sms",
+        "title": "Twilio SID - SMS"
+      },
+      {
+        "command": "extension.twilio.sid.call",
+        "title": "Twilio SID - Call"
+      },
+      {
+        "command": "extension.twilio.sid.conference",
+        "title": "Twilio SID - Conference"
+      },
+      {
+        "command": "extension.twilio.sid.authorizationDocument",
+        "title": "Twilio SID - Authorization Document"
+      },
+      {
+        "command": "extension.twilio.sid.Queue",
+        "title": "Twilio SID - Queue"
+      },
+      {
+        "command": "extension.twilio.sid.user",
+        "title": "Twilio SID - User"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28",
+    "tslint": "^5.12.1",
+    "@types/node": "^10.12.21",
+    "@types/mocha": "^2.2.42"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.132",
+    "lodash": "^4.17.11",
+    "randombytes": "^2.1.0",
+    "ts-md5": "^1.2.4",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
