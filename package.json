@@ -65,7 +65,7 @@
 	},
 	"dependencies": {
 		"@types/lodash": "^4.14.132",
-		"lodash": "^4.17.11",
+		"lodash": "^4.17.13",
 		"randombytes": "^2.1.0",
 		"ts-md5": "^1.2.4"
 	}
