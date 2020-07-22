@@ -33,20 +33,62 @@
 			}
 		},
 		"commands": [
-			{ "command": "extension.twilio.sid", "title": "Twilio SID" },
-			{ "command": "extension.twilio.sid.account", "title": "Twilio SID - Account" },
-			{ "command": "extension.twilio.sid.address", "title": "Twilio SID - Address" },
-			{ "command": "extension.twilio.sid.Identity", "title": "Twilio SID - Identity" },
-			{ "command": "extension.twilio.sid.phoneNumber", "title": "Twilio SID - Phone Number" },
-			{ "command": "extension.twilio.sid.request", "title": "Twilio SID - Request" },
-			{ "command": "extension.twilio.sid.MessagingApplication", "title": "Twilio SID - Messaging Application" },
-			{ "command": "extension.twilio.sid.mms", "title": "Twilio SID - MMS" },
-			{ "command": "extension.twilio.sid.sms", "title": "Twilio SID - SMS" },
-			{ "command": "extension.twilio.sid.call", "title": "Twilio SID - Call" },
-			{ "command": "extension.twilio.sid.conference", "title": "Twilio SID - Conference" },
-			{ "command": "extension.twilio.sid.authorizationDocument", "title": "Twilio SID - Authorization Document" },
-			{ "command": "extension.twilio.sid.Queue", "title": "Twilio SID - Queue" },
-			{ "command": "extension.twilio.sid.user", "title": "Twilio SID - User" }
+			{
+				"command": "extension.twilio.sid",
+				"title": "Twilio SID"
+			},
+			{
+				"command": "extension.twilio.sid.account",
+				"title": "Twilio SID - Account"
+			},
+			{
+				"command": "extension.twilio.sid.address",
+				"title": "Twilio SID - Address"
+			},
+			{
+				"command": "extension.twilio.sid.Identity",
+				"title": "Twilio SID - Identity"
+			},
+			{
+				"command": "extension.twilio.sid.phoneNumber",
+				"title": "Twilio SID - Phone Number"
+			},
+			{
+				"command": "extension.twilio.sid.request",
+				"title": "Twilio SID - Request"
+			},
+			{
+				"command": "extension.twilio.sid.MessagingApplication",
+				"title": "Twilio SID - Messaging Application"
+			},
+			{
+				"command": "extension.twilio.sid.mms",
+				"title": "Twilio SID - MMS"
+			},
+			{
+				"command": "extension.twilio.sid.sms",
+				"title": "Twilio SID - SMS"
+			},
+			{
+				"command": "extension.twilio.sid.call",
+				"title": "Twilio SID - Call"
+			},
+			{
+				"command": "extension.twilio.sid.conference",
+				"title": "Twilio SID - Conference"
+			},
+			{
+				"command": "extension.twilio.sid.authorizationDocument",
+				"title": "Twilio SID - Authorization Document"
+			},
+			{
+				"command": "extension.twilio.sid.Queue",
+				"title": "Twilio SID - Queue"
+			},
+			{
+				"command": "extension.twilio.sid.user",
+				"title": "Twilio SID - User"
+			}
 		]
 	},
 	"scripts": {
@@ -57,16 +99,16 @@
 		"test": "npm run compile && node ./node_modules/vscode/bin/test"
 	},
 	"devDependencies": {
-		"typescript": "^3.3.1",
-		"vscode": "^1.1.28",
-		"tslint": "^5.12.1",
-		"@types/node": "^10.12.21",
-		"@types/mocha": "^2.2.42"
+		"typescript": "^3.9.7",
+		"vscode": "^1.1.37",
+		"tslint": "^6.1.2",
+		"@types/node": "^12.12.6",
+		"@types/mocha": "^2.2.48"
 	},
 	"dependencies": {
-		"@types/lodash": "^4.14.132",
-		"lodash": "^4.17.13",
+		"@types/lodash": "^4.14.158",
+		"lodash": "^4.17.19",
 		"randombytes": "^2.1.0",
-		"ts-md5": "^1.2.4"
+		"ts-md5": "^1.2.7"
 	}
 }
